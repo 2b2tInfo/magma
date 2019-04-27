@@ -205,8 +205,3 @@ And the army of Kickstarter supporters who contributed to this project.
 
 The best way to get an issue fixed is to create a pull request with a unit test added to the check folder which reproduces the issue and checks for the expected output. In general, please be sure to run the check.vg and magma.vg scripts before creating a pull request to make sure the newly submitted code doesn't introduce a memory leak, or invalid memory operation.
 
-####TL;DR
-
-I always like tldr but this is just something you cant skip as all parts are needed to ensure it works. This may change when the VM Images are ready.
-
-
