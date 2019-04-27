@@ -143,6 +143,8 @@ build.magma
 build.check
 ```
 
+### Sandbox Testing
+
 To setup a sandbox database which can be used to run the unit tests, or experiment with magma, run (assuming the development userid is setup with permission to your database):
 
 ```shell
