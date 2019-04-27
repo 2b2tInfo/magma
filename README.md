@@ -100,8 +100,10 @@ CREATE USER 'username'@'localhost' IDENTIFIED BY 'password';
 GRANT ALL PRIVILEGES ON *.* TO 'username'@'localhost' WITH GRANT OPTION;
 ```
 Please modify the privileges after installation to protect your server.
+If you would like to create an admin account this would also be a good time (Not that you can't create one later).
 
 **Memcached**
+
 To start Memcached run the commands below.
 
 For Centos 6.
