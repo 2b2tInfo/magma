@@ -62,7 +62,7 @@ magma/
 
 # Installation Instructions
 
-These instructions are targeted at systems running CentOS 6 and Centos 7(Included by myself).
+These instructions are targeted at systems running CentOS 6 and Centos 7(Added by myself).
 
 ### Prerequisites
 
@@ -95,7 +95,7 @@ For Centos 7.
 systemctl enable mariadb && systemctl start mariadb
 ```
 
-The password is not set yet. So the default password is "" a.k.a press enter when password is asked.
+The default root password is "" a.k.a press enter when password is asked.
 
 ```shell
 mysql -u root -p
