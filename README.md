@@ -94,10 +94,7 @@ echo "GRANT ALL PRIVILEGES ON *.* TO 'magma'@'localhost' WITH GRANT OPTION;" | m
 For Centos 7.
 ```shell
 systemctl enable mariadb && systemctl start mariadb
-mysql -u root -p
-```
-The default root password is "" a.k.a press enter when password is asked.
-```shell
+mysql -u root
 CREATE USER 'magma'@'localhost' IDENTIFIED BY 'volcano';
 GRANT ALL PRIVILEGES ON *.* TO 'magma'@'localhost' WITH GRANT OPTION;
 ```
