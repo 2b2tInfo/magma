@@ -8,7 +8,8 @@ Magma was originally designed and developed by Ladar Levison for lavabit.com. Th
 ##### Magma
 Here is the link to the development branch of the original magma deamon.
 https://github.com/lavabit/magma/archive/develop.tar.gz
-
+Here is the link to the modified development branch.
+Link not finished yet
 
 ##### Magma Build Images
 Currently finding/creating Magma builds as the link for the images is down but may delete this section as it will probably be better if you followed the installation guide.
@@ -88,17 +89,17 @@ For Centos 6.
 ```shell
 chkconfig mysqld on && service mysqld start
 
-echo "CREATE USER 'magma'@'localhost' IDENTIFIED BY 'volcano';" | mysql -u root
-echo "GRANT ALL PRIVILEGES ON *.* TO 'magma'@'localhost' WITH GRANT OPTION;" | mysql -u root
+echo "CREATE USER 'username'@'localhost' IDENTIFIED BY 'password';" | mysql -u root
+echo "GRANT ALL PRIVILEGES ON *.* TO 'username'@'localhost' WITH GRANT OPTION;" | mysql -u root
 ```
 For Centos 7.
 ```shell
 systemctl enable mariadb && systemctl start mariadb
 mysql -u root
-CREATE USER 'magma'@'localhost' IDENTIFIED BY 'volcano';
-GRANT ALL PRIVILEGES ON *.* TO 'magma'@'localhost' WITH GRANT OPTION;
+CREATE USER 'username'@'localhost' IDENTIFIED BY 'password';
+GRANT ALL PRIVILEGES ON *.* TO 'username'@'localhost' WITH GRANT OPTION;
 ```
-
+Please modify the privileges after installation to protect your server.
 
 **Memcached**
 To start Memcached run the commands below.
@@ -166,7 +167,7 @@ freshen.clamav
 To deploy magma, run the INSTALL script. Note the INSTALL script is out of date, and will need to tweaking to operate perfectly against a copy of the current magma development branch cloned directly via git. Pull requests welcome.
 
 ```shell
-./INSTALL -d ~/ -u magma -p volcano -s Lavabit
+./INSTALL -d ~/ -u username -p password -s Lavabit
 ```
 I will be creating a C script that will automaticly start all services needed for the Magma deamon
 
