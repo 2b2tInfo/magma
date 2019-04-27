@@ -82,6 +82,7 @@ yum -y install gcc make autoconf automake binutils bison flex gcc-c++ gettext li
 **MySQL**
 
 To start MySQL and configure the magma username run the commands below. The supplied password should be replaced with value unique to your environment. You may also want to limit the permissions of the magma database user to the database it will need to access. The global permission is only needed to setup the table schema.
+Sidenote: Don't use this magma account as an admin account. Create another user with a different password.
 
 For Centos 6.
 ```shell
@@ -93,14 +94,12 @@ echo "GRANT ALL PRIVILEGES ON *.* TO 'magma'@'localhost' WITH GRANT OPTION;" | m
 For Centos 7.
 ```shell
 systemctl enable mariadb && systemctl start mariadb
-```
-
-The default root password is "" a.k.a press enter when password is asked.
-
-```shell
 mysql -u root -p
-CREATE USER 'magma(username)'@'localhost' IDENTIFIED BY 'volcano(password)';
-GRANT ALL PRIVILEGES ON *.* TO 'magma(username)'@'localhost' WITH GRANT OPTION;
+```
+The default root password is "" a.k.a press enter when password is asked.
+```shell
+CREATE USER 'magma'@'localhost' IDENTIFIED BY 'volcano';
+GRANT ALL PRIVILEGES ON *.* TO 'magma'@'localhost' WITH GRANT OPTION;
 ```
 
 
