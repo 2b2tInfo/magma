@@ -67,13 +67,31 @@ These instructions are targeted at systems running CentOS 6 and Centos 7(Added b
 
 ### Prerequisites
 
-Install the dependencies (Centos 6) (make sure that EPEL is enabled):
+Install the dependencies (Centos 6):
 
 ```shell
-yum -y install gcc make autoconf automake binutils bison flex gcc-c++ gettext libtool make patch pkgconfig mysql-server memcached gettext-devel patch perl perl-Time-HiRes check check-devel ncurses-devel libbsd-devel zlib-devel valgrind valgrind-devel
+yum --quiet --assumeyes --enablerepo=epel install gcc make autoconf automake binutils bison flex gcc-c++ gettext libtool make patch pkgconfig mysql-server memcached gettext-devel patch perl perl-Time-HiRes check check-devel ncurses-devel libbsd-devel zlib-devel valgrind valgrind-devel  install python-pip libffi-devel python-ply python-pycparser python-cffi python-devel zlib-devel libcom_err-devel libsepol-devel libselinux-devel keyutils-libs-devel krb5-devel openssl-devel python-crypto2.6 inotify-tools
 ```
 
-Install the dependencies (Centos 7) (make sure that EPEL is enabled):
+Also you could install these packages but these are not neccesary for building or running the magma deamon, these packages are used to retrieve magma code and other general git management.
+
+```shell
+yum --quiet --assumeyes install wget git rsync perl-Git perl-Error
+```
+
+Install the dependencies (Centos 7):
+
+First run this command to install the EPEL Package.
+
+```shell
+yum --assumeyes --enablerepo=extras install epel-release
+```
+
+```shell
+yum --assumeyes --enablerepo=epel install valgrind valgrind-devel texinfo autoconf automake libtool ncurses-devel gcc-c++ libstdc++-devel gcc cloog-ppl cpp glibc-devel glibc-headers kernel-headers libgomp mpfr
+```
+
+Then we can run this command to install all other packages
 
 ```shell
 yum -y install gcc make autoconf automake binutils bison flex gcc-c++ gettext libtool make patch pkgconfig mariadb-server mariadb memcached gettext-devel patch perl perl-Time-HiRes check check-devel ncurses-devel libbsd-devel zlib-devel valgrind valgrind-devel
