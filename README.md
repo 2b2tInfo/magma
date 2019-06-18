@@ -30,8 +30,8 @@ vagrant init lavabit/magma; vagrant up --provider libvirt
 # Hyper-V
 vagrant init lavabit/magma; vagrant up --provider hyperv
 ```
-This link is broken and soon will be replaced with a working one.
-Images are available for alternate platforms [here](https://atlas.hashicorp.com/lavabit).
+This link is broken but will be kept if it gets fixed.
+LINK IS BROKEN [here](https://atlas.hashicorp.com/lavabit).
 
 # Tarball Contents
 
