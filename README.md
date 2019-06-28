@@ -8,12 +8,9 @@ Magma was originally designed and developed by Ladar Levison for lavabit.com. Th
 ##### Magma
 Here is the link to the development branch of the original magma deamon.
 https://github.com/lavabit/magma/archive/develop.tar.gz
-Here is the link to the modified development branch.
-Link not finished yet
 
 ##### Magma Build Images
-Currently finding/creating Magma builds as the link for the images is down but may delete this section as it will probably be better if you followed the installation guide.
-Also I will be creating a Docker image as well as the other main VM images.
+I haven't had time to check the vagrant boxes but assuming working order.
 
 For those looking for a slim virtual machine pre-configured to build and run magma, consider the following Vagrant boxes which have been created specifically for that purpose. Images have been created to support the VirtualBox, Hyper-V, VMware, and libvirt Vagrant providers. An official Docker image is on the roadmap, but for the time being you might want to consider one of the community supported images. Use the appropriate command below to download and provision a Vagrant instance.
 
