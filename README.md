@@ -30,7 +30,7 @@ vagrant init lavabit/magma; vagrant up --provider libvirt
 # Hyper-V
 vagrant init lavabit/magma; vagrant up --provider hyperv
 ```
-This [link](https://atlas.hashicorp.com/lavabit) is broken but will be kept if it gets fixed.
+This [link](https://atlas.hashicorp.com/lavabit) *contained* the pre-configured images but is now broken but is kept if it gets fixed.
 
 # Tarball Contents
 
@@ -62,7 +62,7 @@ magma/
 
 # Installation Instructions
 
-These instructions are targeted at systems running CentOS 6 and Centos 7(Added by myself).
+These instructions are targeted at systems running CentOS 6 and Centos 7 (Added in updated version).
 
 ### Prerequisites
 
@@ -72,7 +72,7 @@ Install the dependencies (Centos 6):
 yum --quiet --assumeyes --enablerepo=epel install gcc make autoconf automake binutils bison flex gcc-c++ gettext libtool make patch pkgconfig mysql-server memcached gettext-devel patch perl perl-Time-HiRes check check-devel ncurses-devel libbsd-devel zlib-devel valgrind valgrind-devel  install python-pip libffi-devel python-ply python-pycparser python-cffi python-devel zlib-devel libcom_err-devel libsepol-devel libselinux-devel keyutils-libs-devel krb5-devel openssl-devel python-crypto2.6 inotify-tools
 ```
 
-Also you could install these packages but these are not neccesary for building or running the magma deamon, these packages are used to retrieve magma code and other general git management.
+Also you could install these packages but these are not neccesary for building or running the magma deamon, these packages are used to retrieve magma code and other general management.
 
 ```shell
 yum --quiet --assumeyes install wget git rsync perl-Git perl-Error
@@ -80,22 +80,22 @@ yum --quiet --assumeyes install wget git rsync perl-Git perl-Error
 
 Install the dependencies (Centos 7):
 
-First run this command to install the EPEL Package.
+First run this command to install the main EPEL release or else the rest of the commands of the centos 7 version won't work.
 
 ```shell
 yum --assumeyes --enablerepo=extras install epel-release
 ```
+Then you can run this to install all the EPEL packages for the magma demon.
 
 ```shell
 yum --assumeyes --enablerepo=epel install valgrind valgrind-devel texinfo autoconf automake libtool ncurses-devel gcc-c++ libstdc++-devel gcc cloog-ppl cpp glibc-devel glibc-headers kernel-headers libgomp mpfr
 ```
 
-Then we can run this command to install all other packages
+Then we can run this command to install all other packages that don't require the EPEL Release
 
 ```shell
 yum -y install gcc make autoconf automake binutils bison flex gcc-c++ gettext libtool make patch pkgconfig mariadb-server mariadb memcached gettext-devel patch perl perl-Time-HiRes check check-devel ncurses-devel libbsd-devel zlib-devel valgrind valgrind-devel
 ```
-
 
 **MySQL**
 
@@ -109,6 +109,7 @@ chkconfig mysqld on && service mysqld start
 echo "CREATE USER 'username'@'localhost' IDENTIFIED BY 'password';" | mysql -u root
 echo "GRANT ALL PRIVILEGES ON *.* TO 'username'@'localhost' WITH GRANT OPTION;" | mysql -u root
 ```
+
 For Centos 7.
 ```shell
 systemctl enable mariadb && systemctl start mariadb
