@@ -1,7 +1,5 @@
 # Description
-This is the modified magma deamon for a personal project of creating a private, secure and forever free web/mail server.
-
-Magma was originally designed and developed by Ladar Levison for lavabit.com. The current release is currently under heavy development, and some of the features and functions contained herein are unstable. The SMTP, POP, and IMAP protocol handlers are reasonably mature. The DMTP, DMAP and HTTP implementations (along with the bundled webmail system) are still in development. Happy hacking.
+Magma was originally designed and developed by Ladar Levison for lavabit.com. The current release is currently under heavy development, and some of the features and functions contained herein are unstable. The SMTP, POP, and IMAP protocol handlers are reasonably mature. The DMTP, DMAP and HTTP implementations (along with the bundled webmail system) are still in development. Happy hacking. 
 
 # Downloads
 
@@ -10,7 +8,7 @@ Here is the link to the development branch of the original magma deamon.
 https://github.com/lavabit/magma/archive/develop.tar.gz
 
 ##### Magma Build Images
-I haven't had time to check the vagrant boxes but assuming working order.
+The orginally listed build images are broken. Will be fixed soon
 
 For those looking for a slim virtual machine pre-configured to build and run magma, consider the following Vagrant boxes which have been created specifically for that purpose. Images have been created to support the VirtualBox, Hyper-V, VMware, and libvirt Vagrant providers. An official Docker image is on the roadmap, but for the time being you might want to consider one of the community supported images. Use the appropriate command below to download and provision a Vagrant instance.
 
@@ -215,6 +213,7 @@ The static files inside the res/pages/webmail folder are compiled using the file
 - Stephen Watt
 
 - Jacob Adkins
+
 
 And the army of Kickstarter supporters who contributed to this project.
 
